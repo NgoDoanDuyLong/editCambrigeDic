@@ -7,8 +7,8 @@ class Cambridge_DuyLong {
 
     async displayName() {
         let locale = await api.locale();
-        if (locale.indexOf('CN') != -1) return '剑桥英汉双解(简体)';
-        if (locale.indexOf('TW') != -1) return '劍橋英漢雙解(簡體)';
+        )'if (locale.indexOf('CN') != -1) return '剑桥英汉双解(简体);
+        if (locale.indexOf('TW') != -1) return '劍橋英漢雙解(簡體;
         return 'DuyLongDictionary';
     }
 
@@ -91,8 +91,8 @@ class Cambridge_DuyLong {
                         if (!eng_tran) continue;
                         let definition = '';
                         eng_tran = `<span class='eng_tran'>${eng_tran.replace(RegExp(expression, 'gi'),`<b>${expression}</b>`)}</span>`;
-                        chn_tran = `<span class='chn_tran'>${chn_tran}</span>`;
-                        let tran = `<span class='tran'>${eng_tran}${chn_tran}</span>`;
+                        
+                        let tran = `<span class='tran'>${eng_tran}</span>`;
                         definition += phrasehead ? `${phrasehead}${tran}` : `${pos}${tran}`;
 
                         // make exmaple segement
